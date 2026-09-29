@@ -1,0 +1,2 @@
+comment transféré le id du jeu cliqué par la link?
+https://www.quora.com/How-do-I-pass-data-from-one-page-to-another-in-HTML-using-JavaScript
