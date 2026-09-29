@@ -1,0 +1,152 @@
+.libraryWrapper {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: fit-content;
+}
+
+h1 {
+    display:flex;
+    position: relative;
+    color: rgb(255,255,255);
+    padding-top: 50px;
+    padding-left: 100px;
+    font-size: clamp(16px, 3em, 650px);
+    max-height: 120px;
+    width:fit-content;
+    transition: all 0.2s ease-in-out;
+}
+
+#gameGrid {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-self: center;
+    
+    margin-top: 3em;
+    margin-bottom: 3em;
+    margin-left: 5vw;
+    margin-right: 5vw;
+
+    background-color: rgb(70, 66, 119);
+    border-radius: 1em;
+    padding: 1em;
+    width:fit-content;
+    transition: all 0.2s ease-in-out;
+    
+}
+
+.gameTile {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+
+    background-color: rgb(103, 97, 156);
+
+    border-radius: 10px;
+
+    min-width: 100px;
+    width: 386px;
+    aspect-ratio: 2/3;
+    margin: 1em;
+
+    cursor: pointer;
+
+    &:hover {
+        & .gameName {
+            bottom: 0px;
+            scale: 1;
+            opacity: 1;
+            background-size:100% 100%;
+        }
+    }
+}
+
+.gameName {
+    position: absolute;
+    bottom: -50px;
+    scale: 0.95;
+    width: 200%;
+    height: 100px;
+    justify-content: center;
+    transition: bottom 0.25s ease-in-out, opacity 0.25s ease-in-out, scale 0.25s ease-in-out, background-size 0.35s ease-in-out;
+    opacity: 0;
+    
+    background-image: url(../images/bottomShade.avif);
+    background-size:100% 200%;
+    background-repeat: no-repeat;
+
+    & > div {
+        position: absolute;
+        bottom: 10px;
+        text-align: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 900;
+        font-size: 40px;
+        color: white;
+        width: 100%;
+    }
+
+    
+}
+
+@media screen and (width <= 500px) {
+
+    main {
+        scrollbar-width: none;
+    }
+
+    .libraryWrapper {
+        justify-content: center;
+    }
+
+    h1 {
+        padding-top: 50px;
+        padding-left: 50px;
+        font-size: 40px;
+    }
+
+    #gameGrid {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 0.5em;
+    }
+
+    .gameTile {
+        width: clamp(100px, 3vw, 250px);
+        aspect-ratio: 2/3;
+        margin: 0.2em;
+
+        &:hover .gameName {
+            opacity: 0;
+        }
+    }
+}
+
+@media screen and (width <= 300px) {
+
+    h1 {
+        padding-top: 20px;
+        padding-left: 20px;
+        font-size: 30px;
+    }
+
+    #gameGrid {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-top: 1em;
+        padding: 0.5em;
+    }
+
+    .gameTile {
+        width: clamp(120px, 1vw, 250px);
+        aspect-ratio: 1/1.4;
+        margin: 0.2em;
+    }
+}

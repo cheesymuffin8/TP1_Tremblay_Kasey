@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game info page</title>
+    <link rel="stylesheet" href="styles/mainStyles.css">
+    <link rel="stylesheet" href="styles/gamePageStyles.css">
+    <script src="scripts/gameInfo.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/gamePage.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="topButtons"><img src="images/logo.png"></a>
+        <nav>
+            <a href="index.html" class="topButtons"><img src="images/home.png" style="scale: 0.9"></a>
+            <a href="index.html" class="topButtons"><img src="images/library.png"></a>
+            <a href="index.html" class="topButtons"><img src="images/wishlist.png"></a>
+        </nav>
+        <nav>
+            <a href="index.html" class="topButtons"><img src="images/cart.png"></a>
+        </nav>
+        <button id="menuButton"><img src="images/menu.png"></button>
+    </header>
+    <nav id="sideBar">
+        <a href="index.html" class="sideButtons"><img src="images/home.png" style="scale: 0.9"><div>Menu</div></a>
+        <a href="index.html" class="sideButtons"><img src="images/library.png"><div>Bibliotèque</div></a>
+        <a href="index.html" class="sideButtons"><img src="images/wishlist.png"><div>Désirés</div></a>
+    </nav>
+    <main>
+        <div id="wrapper">
+            <div id="leftWrapper">
+                <h1>Game Name</h1>
+                <img src="" alt="" id="gameThumbnail">
+                <div id="wishlist">
+                    <div>Désirer</div>
+                    <img src="images/wishlist.png" alt="">
+                </div>
+                <div id="playButton">
+                    <div id="playText">PLAY</div>
+                    <div id="price">price</div>
+                </div>
+            </div>
+            <div id="rightWrapper">
+                <h4>desc</h4>
+                <h2>dev</h2>
+                <h3>pub</h3>
+                <h5>date</h5>
+            </div>
+        </div>
+    </main>
+</body>
+</html> 
